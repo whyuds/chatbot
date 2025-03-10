@@ -2,6 +2,8 @@
 
 一个基于FastAPI和JavaScript的简洁聊天应用，支持Markdown渲染和代码高亮功能。
 
+![img.png](img.png)
+
 ## 功能特点
 
 - 多会话管理：创建、切换和删除对话
@@ -17,19 +19,12 @@
 
 ## 安装配置
 
-### 1. 克隆仓库
-
-```bash
-git clone https://github.com/whyuds/chatbox.git
-cd chatbox
-```
-
-### 2. 创建虚拟环境
+### 1. 创建虚拟环境
 ```bash
 python -m venv venv
 ```
 
-### 激活虚拟环境：
+### 2. 激活虚拟环境：
 - Windows: 
 ```bash
 .\venv\Scripts\activate
@@ -50,7 +45,7 @@ pip install -r requirements.txt
 
 ### 3. 配置AI模型
 
-在`chat_model.py`中配置您的AI模型参数：
+在[`chat_model.py`](./chat_model.py)中配置您的AI模型参数：
 
 ```python
 from langchain_openai import ChatOpenAI

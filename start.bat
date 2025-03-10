@@ -22,7 +22,6 @@ REM Start backend server
 start "Backend Server" python -m uvicorn main:app --host 0.0.0.0 --port 8000
 
 REM Start frontend server
-cd frontend
 start "Frontend Server" python -m http.server 8080
 
 REM Open browser after 3 seconds
