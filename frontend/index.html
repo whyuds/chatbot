@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Interface</title>
+    <link rel="stylesheet" href="styles.css?v=2">
+    <!-- 添加marked.js库 -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- 修正代码高亮库链接 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/github-dark.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/highlight.min.js"></script>
+    <!-- 确保highlight.js在全局可用 -->
+    <script>
+        // 确保highlight.js在全局可用
+        if (typeof hljs !== 'undefined') {
+            console.log('highlight.js 已加载');
+        } else {
+            console.error('highlight.js 加载失败');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <button id="newChat" class="new-chat-btn">+ New Chat</button>
+            <div id="conversationList" class="conversation-list"></div>
+        </aside>
+        
+        <main class="chat-area">
+            <div id="messageContainer" class="messages"></div>
+            <div class="input-area">
+                <textarea id="messageInput" placeholder="Type your message here..."></textarea>
+                <button id="sendButton">Send</button>
+            </div>
+        </main>
+    </div>
+    <!-- Initialize highlight.js before app.js -->
+    <script>
+        // Initialize highlight.js
+        document.addEventListener('DOMContentLoaded', () => {
+            window.hljs = hljs;
+        });
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
