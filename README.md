@@ -45,34 +45,9 @@ pip install -r requirements.txt
 
 ### 3. 配置AI模型
 
-在[`chat_model.py`](./chat_model.py)中配置您的AI模型参数：
-
-```python
-from langchain_openai import ChatOpenAI
-
-llm = ChatOpenAI(
-    model_name="your-model-name",
-    openai_api_key="your-api-key",
-    openai_api_base="your-api-base-url",
-    temperature=0.7
-)
-```
+在[`chat_model.py`](./chat_model.py)中配置您的AI模型参数
 
 ## 启动应用
-
-### 使用启动脚本
-
-在Windows系统中，可以直接运行提供的批处理文件：
-
-```bash
-.\start.bat
-```
-
-该脚本会：
-1. 检查Python环境
-2. 安装必要的依赖
-3. 初始化数据库
-4. 启动后端服务器
 
 ### 手动启动
 
